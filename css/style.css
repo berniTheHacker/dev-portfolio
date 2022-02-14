@@ -1,0 +1,612 @@
+:root {
+    /* Font responisivnes */
+
+    --big--2: clamp(1.56rem, 1.31rem + 1.24vw, 2.20rem);
+    --big--1: clamp(1.88rem, 1.53rem + 1.71vw, 2.75rem);
+    --big-0: clamp(2.25rem, 1.79rem + 2.32vw, 3.44rem);
+    --big-1: clamp(2.70rem, 2.08rem + 3.12vw, 4.30rem);
+    --big-2: clamp(3.24rem, 2.41rem + 4.16vw, 5.37rem);
+    --big-3: clamp(3.89rem, 2.79rem + 5.51vw, 6.71rem);
+    --big-4: clamp(4.67rem, 3.21rem + 7.27vw, 8.39rem);
+    --big-5: clamp(5.60rem, 3.69rem + 9.55vw, 10.49rem);
+/* 
+    --small--2: clamp(0.78rem, 0.81rem + -0.12vw, 0.72rem); */
+    --small--1: clamp(0.94rem, 0.95rem + -0.07vw, 0.90rem);
+    --small-0: clamp(1.13rem, 1.13rem + 0.00vw, 1.13rem);
+    --small-1: clamp(1.35rem, 1.33rem + 0.11vw, 1.41rem);       
+    --small-3: clamp(1.94rem, 1.84rem + 0.50vw, 2.20rem);
+    --small-4: clamp(2.33rem, 2.17rem + 0.81vw, 2.75rem);
+    --small-5: clamp(2.80rem, 2.55rem + 1.24vw, 3.43rem);
+
+
+    --important-font: 'Prata';
+    --normal-font: 'Inter';
+
+    /* Desktop */
+    --body-height: max(140vh, 140vw);
+    --nav-height: max(9.8vh, 9.8vw);
+    --header-text-height: max(15.4vh, 15.4vw);
+    --logos-height: max(1.4vh, 1.4vw);
+    --projects-height: max(32.2vh, 32.2vw);
+    --about-height: max(32.2vh, 32.2vw);
+    --cta-height: max(14vh,14vw);
+    --footer-height: max(4.2vh,4.2vw);
+
+    --gap-height: max(5.6vh, 5.6vw);
+    --small-gap-height: max(2.8vh, 2.8vw);
+    /* Tablet */
+    /* --tablet-body-height: max(377.4vh, 377.4vw); */
+    --tablet-nav-height: max(14.8vh, 14.8vw);
+    /* --tablet-header-text-height: max(29.6vh, 29.6vw); */
+    --tablet-logos-height: max(11.1vh, 11.1vw);
+    /* --tablet-projects-height: max(125.8vh, 125.8vw);
+    --tablet-about-height: max(99.9vh, 99.9vw);
+    --tablet-cta-height: max(25.9vh,25.9vw); */
+    --tablet-footer-height: max(11.1vh, 11.1vw);
+
+    --tablet-gap-height: max(11.1vh, 11.1vw);
+    --tablet-small-gap-height: max(3.7vh, 3.7vw);
+    /* Mobile */
+    /* --mobile-body-height: max(796vh, 796vw); */
+    --mobile-nav-height: max(12.4vh, 12.4vw);
+    /* --mobile-header-text-height: max(61.6vh, 61.6vw); */
+    --mobile-logos-height: max(30.4vh, 30.4vw);
+    /* --mobile-projects-height: max(252.8vh, 252.8vw);
+    --mobile-about-height: max(251.2vh, 251.2vw);
+    --mobile-cta-height: max(59.2vh, 59.2vw); */
+    --mobile-footer-height: max(8.4vh, 8.4vw);
+
+    --mobile-gap-height: max(8.4vh, 8.4vw);
+    --mobile-small-gap-height: max(9.6vh, 9.6vw);
+
+}
+
+
+/***********************************************************************
+ *  Reset
+ **********************************************************************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/***********************************************************************
+ *  Overall
+ **********************************************************************/
+ 
+ 
+
+/***************************
+    Fonts                  
+***************************/
+
+/* Normal font */
+ @font-face { font-family: Inter; src: url('fonts/Inter-Regular.ttf'); } 
+/* Important font */
+ @font-face { font-family: Prata; src: url('fonts/Prata-Regular.ttf'); } 
+
+ 
+ body {
+	font-family: var(--normal-font);
+    background-color: black;
+    text-align: left;
+    height: max(140vh, 140vw);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-button {
+    font-family: var(--important-font);
+    width: 9rem;
+    height: 3rem;
+    font-size: var(--small--1);
+    border: none;
+    background-color: rgba(251,232,80,255);
+    /* box-shadow: 0 0 0 .8rem rgba(251,232,80,255); */
+}
+
+.main-button:hover {
+    cursor: pointer;
+}
+
+.site-logo {
+    font-family: var(--important-font);
+    font-size: var(--small-0);
+    color: whitesmoke;
+}
+
+/***********************************************************************
+ *  Header
+ **********************************************************************/
+.small-gap {
+    height: calc(var(--small-gap-height) + var(--nav-height));
+    background-color: black;
+}
+
+.gap {
+    height: var(--gap-height);
+    background-color: black;
+
+}
+/****************************************** 
+*   Navbar
+*******************************************/
+ .main-nav {
+    display: flex;
+    background-color: black;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.sticky {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+ul {
+    height: var(--nav-height);
+}
+
+.main-nav li {
+    color: rgb(172, 172, 172);
+}
+.push-left {
+    margin-right: auto;
+    margin-left: 7vw;
+}
+
+.push-right {
+    margin-left: auto;
+    margin-right: 7vw;
+}
+
+#hamburger-menu {
+    margin: 0 10vw 0 0;
+    border: none;
+    background-color: black;
+}
+
+#hamburger-menu:hover {
+    cursor: pointer;
+}
+
+/* .hidden {
+    display: flex;
+} */
+
+.main-nav .site-logo {
+    color: whitesmoke;
+}
+/****************************************** 
+*   Main text
+*******************************************/
+.header {
+    height: var(--header-text-height); 
+    max-width: 80vw;
+    flex-wrap: wrap;
+}
+
+
+h1 {
+    font-family: 'Prata';
+    color: white;
+    width: 100%;
+    font-size: var(--big--1);
+}
+
+h2 {
+    font-family: 'Prata';
+    color: white;
+    width: 100%;
+    font-size: var(--big--2);
+}
+
+h3 {
+    font-family: 'Prata';
+    color: white;
+    width: 100%;
+    font-size: var(--small--1);
+}
+
+p {
+    color: rgb(172, 172, 172);
+    width: 100%;
+    /* font-size: var(--small--2); */
+    font-size: var(--small--2);
+    
+}
+
+li {
+    /* font-size: var(--small--2); */
+    font-size: var(--small--2);
+    padding: 0 1vw 0 0;
+}
+
+
+/***********************************************************************
+ *  Main content
+ **********************************************************************/
+ .main-container {
+    max-width: 100vw;
+    flex-wrap: wrap;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section {
+    max-width: 100vw;
+    width: 100%;
+    padding: 0 10vw 0vh 10vw;
+}
+
+ /****************************************** 
+*  Logos
+*******************************************/
+.logos {
+    height: var(--logos-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin: 0 10vw 0vh 10vw; */
+}
+
+.logo {
+    height: var(--logos-height);
+}
+
+.social-logo {
+    height: var(--logos-height);
+}
+ /****************************************** 
+* Projects
+*******************************************/
+.projects {
+    height: var(--projects-height); 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10vw;
+ 
+}
+
+.projects img {
+    width: 35vw;
+    height: calc(0.7 * var(--projects-height));
+    /* aspect-ratio: 1.9 / 1; */
+    object-fit: cover;
+}
+
+/****************************************** 
+* About
+*******************************************/
+.about {
+    background-color: rgba(46,48,56,255);
+    height: var(--about-height); 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10vw;
+    /* row-gap: 1vh; */
+    padding: 2vh 10vw 0vh 10vw;
+}
+
+/****************************************** 
+* Contact
+*******************************************/
+.contact {
+    height: var(--cta-height); 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10vw;
+}
+
+/****************************************** 
+* Footer
+*******************************************/
+footer {
+    margin-left: 0;
+    /* width: 100vw; */
+    height: var(--footer-height);
+    background-color: rgba(46,48,56,255);
+    /* color: white; */
+
+}
+
+footer .site-logo {
+    width: 50%;
+}
+
+footer img {
+    margin-right: 1vw;
+}
+
+/****************************************** 
+*******************************************
+
+            Media queries
+ 
+******************************************
+*******************************************/
+
+
+/* 1150 1024 */
+@media only screen and (max-width: 1150px){
+    
+    .hidden {
+        display: none;
+        width: 100%;
+    }
+    ul {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+
+    #hamburger-menu {
+        display: flex;
+    }
+    body {
+        height: var(--tablet-body-height);
+    }
+    
+    .small-gap {
+        height: calc(var(--tablet-small-gap-height) + var(--tablet-nav-height));
+    }
+    
+    .gap {
+        height: var(--tablet-gap-height);
+    }
+    
+    ul {
+        height: var(--tablet-nav-height);
+    }
+    
+    .header {
+        height: var(--tablet-header-text-height); 
+    }
+    
+    .logos {
+        max-width: 100%;
+        height: var(--tablet-logos-height);
+    }
+    
+    .logo {
+        width: 25vw;
+        max-height: calc(0.75 * var(--tablet-logos-height));
+    }
+    
+    .social-logo {
+        height: calc(var(--small--1) * 2);
+    }
+    
+    .projects {
+        height: var(--tablet-projects-height); 
+    }
+    
+    .projects img {
+        height: calc(0.25 * var(--tablet-projects-height));
+        /* aspect-ratio: 4 / 12; */
+        width: 80vw;
+        object-fit: cover;
+    }
+    
+    .about {
+        height: var(--tablet-about-height); 
+    }
+    
+    .contact {
+        height: var(--tablet-cta-height); 
+    }
+    
+    footer {
+        height: var(--tablet-footer-height);
+    }
+    
+    /****************************************** 
+    * Projects
+    *******************************************/
+    .spense-img {grid-area: spense-img}
+    .spense-title {grid-area: spense-title}
+    .spense-text {grid-area: spense-text}
+    .yelp-img {grid-area: yelp-img}
+    .yelp-title {grid-area: yelp-title}
+    .yelp-text {grid-area: yelp-text}
+
+    .projects {
+        width: 100%;
+        grid-template-columns: 1fr;
+        /* row-gap: 1vh; */
+
+        grid-template-areas: 
+        "spense-img"
+        "spense-title"
+        "spense-text"
+        "yelp-img"
+        "yelp-title"
+        "yelp-text";
+    }
+
+
+
+    /****************************************** 
+    * About
+    *******************************************/
+    /* .about {
+        background-color: rgba(46,48,56,255);
+        height: 150vh; 
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 1rem; 
+    }
+    */
+    .logos {
+        flex-wrap: wrap;
+    }
+    
+    /* .contact {
+        height: 50vh; 
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }  */
+}
+
+@media only screen and (min-width: 1151px){
+
+    .hidden {
+        display: flex;
+    }
+    #hamburger-menu {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    body {
+        height: var(--mobile-body-height);
+    }
+    
+    .small-gap {
+        height: calc(var(--mobile-small-gap-height) + var(--mobile-nav-height));
+    }
+    
+    .gap {
+        height: var(--mobile-gap-height);
+    }
+    
+    ul {
+        height: var(--mobile-nav-height);
+    }
+    
+    .header {
+        height: var(--mobile-header-text-height); 
+    }
+    
+    .logos {
+        max-width: 100%;
+        height: var(--mobile-logos-height);
+    }
+    
+    .logo {
+        width: 28vw;
+        max-height: calc(0.75 * var(--mobile-logos-height));
+    }
+    
+    .social-logo {
+        height: calc(var(--small--1) * 2);
+    }
+    
+    .projects {
+        height: var(--mobile-projects-height); 
+    }
+    
+    .projects img {
+        height: calc(0.25 * var(--mobile-projects-height));
+        /* aspect-ratio: 4 / 12; */
+        width: 80vw;
+        object-fit: cover;
+    }
+    
+    .about {
+        height: var(--mobile-about-height); 
+    }
+    
+    .contact {
+        height: var(--mobile-cta-height); 
+    }
+    
+    footer {
+        height: var(--mobile-footer-height);
+    }
+
+    .about {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+
+
