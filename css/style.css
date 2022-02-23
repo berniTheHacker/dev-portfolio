@@ -243,10 +243,6 @@ ul {
     cursor: pointer;
 }
 
-/* .hidden {
-    display: flex;
-} */
-
 .main-nav .site-logo {
     color: whitesmoke;
 }
@@ -284,13 +280,11 @@ h3 {
 p {
     color: rgb(172, 172, 172);
     width: 100%;
-    /* font-size: var(--small--2); */
     font-size: var(--small--2);
     
 }
 
 li {
-    /* font-size: var(--small--2); */
     font-size: var(--small--2);
     padding: 0 1vw 0 0;
 }
@@ -322,7 +316,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* margin: 0 10vw 0vh 10vw; */
 }
 
 .logo {
@@ -346,7 +339,6 @@ section {
 .projects img {
     width: 35vw;
     height: calc(0.7 * var(--projects-height));
-    /* aspect-ratio: 1.9 / 1; */
     object-fit: cover;
 }
 
@@ -359,7 +351,6 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10vw;
-    /* row-gap: 1vh; */
     padding: 2vh 10vw 0vh 10vw;
 }
 
@@ -378,11 +369,8 @@ section {
 *******************************************/
 footer {
     margin-left: 0;
-    /* width: 100vw; */
     height: var(--footer-height);
     background-color: rgba(46,48,56,255);
-    /* color: white; */
-
 }
 
 footer .site-logo {
@@ -488,7 +476,7 @@ footer img {
     .projects {
         width: 100%;
         grid-template-columns: 1fr;
-        /* row-gap: 1vh; */
+
 
         grid-template-areas: 
         "spense-img"
@@ -500,30 +488,10 @@ footer img {
     }
 
 
-
-    /****************************************** 
-    * About
-    *******************************************/
-    /* .about {
-        background-color: rgba(46,48,56,255);
-        height: 150vh; 
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        font-size: 1rem; 
-    }
-    */
     .logos {
         flex-wrap: wrap;
     }
-    
-    /* .contact {
-        height: 50vh; 
 
-        display: grid;
-        grid-template-columns: 1fr;
-
-    }  */
 }
 
 @media only screen and (min-width: 1151px){

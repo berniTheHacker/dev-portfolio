@@ -1,8 +1,7 @@
 const hamburgeMenu = document.getElementById("hamburger-menu");
 const hiddenElements = document.querySelectorAll(".hidden");
-// const nav = document.getElementsID("nav");
+const ul = document.getElementById("ul");
 
-console.log("You're hacker, aren't you? ;)");
 
 const navDisplay = (styleChange) => {
     let i = 0;
@@ -12,27 +11,25 @@ const navDisplay = (styleChange) => {
     }
 }
 
+
 let menuOpen = false; 
 
-hamburgeMenu.addEventListener('click', () => {
+hamburgeMenu.addEventListener('click', function () {
 
-    if (menuOpen === false) {
-        hamburgeMenu.style.transform = "rotate(0.25turn)";
-        navDisplay("flex");
-        // nav.style.flexWrap = "wrap";
-        // ul.style.height = "50vh";
+        if (menuOpen === false) {
+            hamburgeMenu.style.transform = "rotate(0.25turn)";
+            hamburgeMenu.style.padding = "0 0 0 0";
+            navDisplay("flex");
+            ul.style.height = "100vh";
+            menuOpen = true;
 
-
-        menuOpen = true;
-
-    } else if (menuOpen === true) {
-        hamburgeMenu.style.transform = "rotate(0turn)";
-        navDisplay("none");
-        // hidden.style.backgroundColor = "";
-
-        menuOpen = false;
-    };
+        } else if (menuOpen === true) {
+            hamburgeMenu.style.transform = "rotate(0turn)";
+            navDisplay("none");
+            ul.style.height = "max(12.4vh, 12.4vw)";
+            menuOpen = false;
+        };
 
 
 
-});
+    });
